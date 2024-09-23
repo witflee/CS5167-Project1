@@ -30,7 +30,7 @@ h2 {
     font-size: 2rem;
     font-weight: bold;
     color: #c0c0c0; 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
   
@@ -87,6 +87,10 @@ button {
 button:hover {
     background-color: #ffb74d; 
 }
+
+button:disabled {
+    background-color: #facf90; 
+}
   
 button:active {
     background-color: #e67e22; 
@@ -95,6 +99,15 @@ button:active {
 .buttons {
     display: flex;
     padding: 20px;
+    justify-content: center;
+}
+
+.skinny-button {
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
 }
 
 .card {
@@ -116,6 +129,19 @@ input[type="text"] {
 input[type="text"]:focus {
     border-color: #ff9800;
 }
+
+textarea {
+    background-color: #2a2a2a;
+    color: #ddd;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease;
+    min-height: 100px;
+}
   
 label {
     display: block;
@@ -134,7 +160,7 @@ label {
     border: 1px solid #3e3e3e; 
 }
 
-.extra-info {
+.extra-info, .time-table {
     background-color: #262626; 
     padding: 15px;
     margin: 20px;
@@ -160,7 +186,7 @@ label {
 
 .timey-whimey {
     width: 100%;
-    display: block;
+    max-width: 400px;
     font-size: 14px;
     color: #b0b0b0;
 }
