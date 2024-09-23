@@ -1,9 +1,10 @@
 <script>
   import ImageSelector from './lib/ImageSelector.svelte';
   import RtClock from './lib/RTClock.svelte';
-  import {dummyData} from './lib/stores';
+  import { dummyData, theme } from './lib/stores';
   import TimeData from './lib/TimeData.svelte';
   import TimeTable from './lib/TimeTable.svelte';
+  import { onMount } from 'svelte';
 
   let dateTime = new Date().toLocaleString();
   let car = "Toyota GT86";
@@ -23,6 +24,16 @@
   let showSecondaryOptions = true;
   $: selectedOption = null;
   $: layoutArray = trackArray[trackArray.findIndex(track => track.name)].layouts;
+
+  function toggleTheme() {
+    theme.update(current => current === 'light' ? 'dark' : 'light');
+  }
+
+  onMount(() => {
+    theme.subscribe(value => {
+      document.documentElement.setAttribute('data-theme', value);
+    });
+  });
 
   dummyData.subscribe(data => {
     lapTimes = data.map(item => item.lapTime);
@@ -82,6 +93,10 @@
 </script>
 
 <main>
+  <button class="theme-toggle" on:click={toggleTheme}>
+    Toggle Theme
+  </button>
+
   <h1>Lap Time Tracker</h1>
   <h2>Welcome back, John Doe!</h2>
   <RtClock/>

@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export let data = writable([]);
+export const theme = writable('dark');
 
 export let dummyData = writable([
     {dateTime: '9/12/2024, 8:02:34 PM', car: 'Toyota GT86', track: 'Tsukuba Fruits Line', tires: 'Semislicks', layout: 'Outbound', surface: ['Cold'], lapTime: '4:58', goal: '5:00', notes: 'Semislicks helped to make up for grip loss due to cold temperatures.'},

@@ -3,11 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --background-light: #ffffff;
+    --background-dark: #1c1c1c;
+    --text-light: #000000;
+    --text-dark: #ddd;
+    --button-bg-light: #009879;
+    --button-bg-dark: #ff9800;
+    --button-text-light: #ffffff;
+    --button-text-dark: #1c1c1c;
+}
   
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1c1c1c; 
-    color: #ddd; 
+    /* background-color: #1c1c1c; 
+    color: #ddd;  */
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
   
 main {
@@ -110,6 +123,18 @@ button:active {
     margin-top: 30px;
 }
 
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 .card {
     padding: 10px;
 }
@@ -193,4 +218,16 @@ label {
 
 .interactive-content {
     width: 1200px;
+}
+
+.theme-toggle {
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+}
+
+[data-theme="dark"] {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --button-bg-light: var(--button-bg-dark);
+    --button-text-light: var(--button-text-dark);
 }
