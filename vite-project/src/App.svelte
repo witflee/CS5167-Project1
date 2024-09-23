@@ -31,14 +31,14 @@
   });
 
   let carArray = [
-    { type: 'car', name: 'Toyota GT86', imageUrl: 'images/gt86.jpg' },
-    { type: 'car', name: 'Toyota AE86', imageUrl: 'images/ae86.jpg' },
-    { type: 'car', name: 'BMW M3 E30', imageUrl: 'images/m3e30.jpg' }
+    { type: 'car', name: 'Toyota GT86', imageUrl: 'src/assets/gt86.jpg' },
+    { type: 'car', name: 'Toyota AE86', imageUrl: 'src/images/ae86.jpg' },
+    { type: 'car', name: 'BMW M3 E30', imageUrl: 'src/images/m3e30.jpg' }
   ];
   let trackArray = [
-    { type: 'track', name: 'Tsukuba Fruits Line', imageUrl: 'images/tsukuba.png', layouts: ["Inbound", "Outbound"] },
-    { type: 'track', name: 'Gunma Cycle Sports Center', imageUrl: 'images/gunsai.png', layouts: ["Full", "Qualification"] },
-    { type: 'track', name: 'Nurburgring', imageUrl: 'images/nurburgring.png', layouts: ["Short loop", "Long loop"] }
+    { type: 'track', name: 'Tsukuba Fruits Line', imageUrl: 'src/images/tsukuba.png', layouts: ["Inbound", "Outbound"] },
+    { type: 'track', name: 'Gunma Cycle Sports Center', imageUrl: 'src/images/gunsai.png', layouts: ["Full", "Qualification"] },
+    { type: 'track', name: 'Nurburgring', imageUrl: 'src/images/nurburgring.png', layouts: ["Short loop", "Long loop"] }
   ];
 
   function handleSelect(event) {
