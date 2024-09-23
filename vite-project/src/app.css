@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c; 
+    color: #ddd; 
+}
+  
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f1f1f1; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c0c0c0; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+select {
+    background-color: #2a2a2a; 
+    color: #ddd;
+    border: 1px solid #3e3e3e; 
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+  
+select:hover {
+    background-color: #3b3b3b; 
+}
+  
+select:focus {
+    border-color: #ff9800; 
+}
+  
+option {
+    background-color: #2a2a2a;
+    color: #ddd;
+}
+  
+.image-container {
+    text-align: center;
+}
+  
+.image-container img {
+    max-width: 350px;
+    max-height: 200px;
+    border: 2px solid #3e3e3e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+button {
+    background-color: #ff9800; 
+    color: #1c1c1c;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: #ffb74d; 
+}
+  
+button:active {
+    background-color: #e67e22; 
+}
+
+.buttons {
+    display: flex;
+    padding: 20px;
+}
+
+.card {
+    padding: 10px;
+}
+  
+input[type="text"] {
+    background-color: #2a2a2a;
+    color: #ddd;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+  
+input[type="text"]:focus {
+    border-color: #ff9800;
+}
+  
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #b0b0b0; 
+}
+  
+.car-options, .track-options, .time-data {
+    background-color: #262626; 
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #3e3e3e; 
+}
+
+.extra-info {
+    background-color: #262626; 
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1130px;
+    border: 1px solid #3e3e3e; 
+    align-self: flex-start;
+}
+
+.secondary-options {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.selectors {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.timey-whimey {
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.interactive-content {
+    width: 1200px;
+}
