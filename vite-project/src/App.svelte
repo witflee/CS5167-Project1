@@ -22,7 +22,7 @@
   let saved = false;
   let showSecondaryOptions = true;
   $: selectedOption = null;
-  $: layoutArray = trackArray[trackArray.findIndex(track => track.name)].layouts; //doesn't update when track changes
+  $: layoutArray = trackArray[trackArray.findIndex(track => track.name)].layouts;
 
   dummyData.subscribe(data => {
     lapTimes = data.map(item => item.lapTime);
@@ -77,8 +77,6 @@
 
       topTime = topTime.toFixed(2).replace(".", ":");
       vsTop = vsTop.replace(".", ":");
-
-      //calculate lapTime vs goal
     }
   }
 </script>
