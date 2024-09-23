@@ -13,16 +13,16 @@
   let surface = [];
   let lapTime = "";
   let notes = "";
+  let goal = "";
 
   let lapTimes = [];
   let topTime;
   let vsTop = "0:00";
 
   let saved = false;
+  let showSecondaryOptions = true;
   $: selectedOption = null;
   $: layoutArray = trackArray[trackArray.findIndex(track => track.name)].layouts; //doesn't update when track changes
-
-  let showSecondaryOptions = true; // Boolean variable to control visibility of secondary options
 
   dummyData.subscribe(data => {
     lapTimes = data.map(item => item.lapTime);
@@ -31,14 +31,14 @@
   });
 
   let carArray = [
-    { type: 'car', name: 'Toyota GT86', imageUrl: '/images/gt86.jpg' },
-    { type: 'car', name: 'Toyota AE86', imageUrl: '/images/ae86.jpg' },
-    { type: 'car', name: 'BMW M3 E30', imageUrl: '/images/m3e30.jpg' }
+    { type: 'car', name: 'Toyota GT86', imageUrl: 'images/gt86.jpg' },
+    { type: 'car', name: 'Toyota AE86', imageUrl: 'images/ae86.jpg' },
+    { type: 'car', name: 'BMW M3 E30', imageUrl: 'images/m3e30.jpg' }
   ];
   let trackArray = [
-    { type: 'track', name: 'Tsukuba Fruits Line', imageUrl: '/images/tsukuba.png', layouts: ["Inbound", "Outbound"] },
-    { type: 'track', name: 'Gunma Cycle Sports Center', imageUrl: '/images/gunsai.png', layouts: ["Normal", "Reversed"] },
-    { type: 'track', name: 'Nurburgring', imageUrl: '/images/nurburgring.png', layouts: ["Short loop", "Long loop"] }
+    { type: 'track', name: 'Tsukuba Fruits Line', imageUrl: 'images/tsukuba.png', layouts: ["Inbound", "Outbound"] },
+    { type: 'track', name: 'Gunma Cycle Sports Center', imageUrl: 'images/gunsai.png', layouts: ["Full", "Qualification"] },
+    { type: 'track', name: 'Nurburgring', imageUrl: 'images/nurburgring.png', layouts: ["Short loop", "Long loop"] }
   ];
 
   function handleSelect(event) {
@@ -64,7 +64,7 @@
 
   let saveData = () => {
     dummyData.update((values) => {
-      values.push({dateTime, car, track, tires, layout, surface, lapTime, notes});
+      values.push({dateTime, car, track, tires, layout, surface, lapTime, goal, notes});
       console.log('Saved data:', values);
       return values;
     });
@@ -77,6 +77,8 @@
 
       topTime = topTime.toFixed(2).replace(".", ":");
       vsTop = vsTop.replace(".", ":");
+
+      //calculate lapTime vs goal
     }
   }
 </script>

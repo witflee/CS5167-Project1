@@ -69,6 +69,7 @@
           <th>Layout</th>
           <th>Surface</th>
           <th>Lap Time</th>
+          <th>Goal</th>
           <th>Notes</th>
         </tr>
       </thead>
@@ -117,6 +118,12 @@
                   {entry.lapTime}
                 {/if}
             </td>
+            <td>{#if editMode}
+                <input type="text" value={entry.goal} on:input={(e) => handleInputChange(e, index, 'goal')} />
+              {:else}
+                {entry.goal}
+              {/if}
+          </td>
             <td>{#if editMode}
                 <input type="text" value={entry.notes} on:input={(e) => handleInputChange(e, index, 'notes')} />
               {:else}
